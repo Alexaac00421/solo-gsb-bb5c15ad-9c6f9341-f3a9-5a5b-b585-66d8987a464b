@@ -1,0 +1,18 @@
+{
+  "name": "cue-sheet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "剧场排练走台提示计划 Web 应用",
+  "workspaces": [
+    "shared",
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build -w shared && npm run build -w server && npm run build -w web",
+    "dev:server": "npm run dev -w server",
+    "dev:web": "npm run dev -w web",
+    "start": "node server/dist/server/src/index.js",
+    "test": "npm run test -w shared"
+  }
+}
